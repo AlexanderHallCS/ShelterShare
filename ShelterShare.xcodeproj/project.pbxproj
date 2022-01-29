@@ -13,9 +13,12 @@
 		11F0624927A5D68D006E20F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F0624727A5D68D006E20F9 /* Main.storyboard */; };
 		11F0624B27A5D68F006E20F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F0624A27A5D68F006E20F9 /* Assets.xcassets */; };
 		11F0624E27A5D68F006E20F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F0624C27A5D68F006E20F9 /* LaunchScreen.storyboard */; };
+		11F0625827A5F5F9006E20F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F0625727A5F5F9006E20F9 /* GoogleService-Info.plist */; };
+		DC9195B92507BA17CB3EFC8A /* Pods_ShelterShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB1228E1DF62193335C446F /* Pods_ShelterShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CB1228E1DF62193335C446F /* Pods_ShelterShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShelterShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F0623E27A5D68D006E20F9 /* ShelterShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShelterShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F0624127A5D68D006E20F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F0624327A5D68D006E20F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		11F0624A27A5D68F006E20F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F0624D27A5D68F006E20F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11F0624F27A5D68F006E20F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11F0625727A5F5F9006E20F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3905FDCF3F07C5E95B0056E1 /* Pods-ShelterShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelterShare.release.xcconfig"; path = "Target Support Files/Pods-ShelterShare/Pods-ShelterShare.release.xcconfig"; sourceTree = "<group>"; };
+		5AE392F6A604C677EE287227 /* Pods-ShelterShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelterShare.debug.xcconfig"; path = "Target Support Files/Pods-ShelterShare/Pods-ShelterShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9195B92507BA17CB3EFC8A /* Pods_ShelterShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				11F0624027A5D68D006E20F9 /* ShelterShare */,
 				11F0623F27A5D68D006E20F9 /* Products */,
+				B714F1315F8DDEFBE7E64762 /* Pods */,
+				1DD636B14F33BB36E321C7B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +70,7 @@
 				11F0624727A5D68D006E20F9 /* Main.storyboard */,
 				11F0624A27A5D68F006E20F9 /* Assets.xcassets */,
 				11F0624C27A5D68F006E20F9 /* LaunchScreen.storyboard */,
+				11F0625727A5F5F9006E20F9 /* GoogleService-Info.plist */,
 				11F0624F27A5D68F006E20F9 /* Info.plist */,
 			);
 			path = ShelterShare;
@@ -83,6 +93,24 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		1DD636B14F33BB36E321C7B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CB1228E1DF62193335C446F /* Pods_ShelterShare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B714F1315F8DDEFBE7E64762 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AE392F6A604C677EE287227 /* Pods-ShelterShare.debug.xcconfig */,
+				3905FDCF3F07C5E95B0056E1 /* Pods-ShelterShare.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11F0625227A5D68F006E20F9 /* Build configuration list for PBXNativeTarget "ShelterShare" */;
 			buildPhases = (
+				5E1E4C6EC1E932C6F0B4DBC4 /* [CP] Check Pods Manifest.lock */,
 				11F0623A27A5D68D006E20F9 /* Sources */,
 				11F0623B27A5D68D006E20F9 /* Frameworks */,
 				11F0623C27A5D68D006E20F9 /* Resources */,
+				880771049AA0479EEDD0FF25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,12 +172,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F0624E27A5D68F006E20F9 /* LaunchScreen.storyboard in Resources */,
+				11F0625827A5F5F9006E20F9 /* GoogleService-Info.plist in Resources */,
 				11F0624B27A5D68F006E20F9 /* Assets.xcassets in Resources */,
 				11F0624927A5D68D006E20F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E1E4C6EC1E932C6F0B4DBC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShelterShare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		880771049AA0479EEDD0FF25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShelterShare/Pods-ShelterShare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShelterShare/Pods-ShelterShare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShelterShare/Pods-ShelterShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11F0623A27A5D68D006E20F9 /* Sources */ = {
@@ -300,6 +373,7 @@
 		};
 		11F0625327A5D68F006E20F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE392F6A604C677EE287227 /* Pods-ShelterShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -330,6 +404,7 @@
 		};
 		11F0625427A5D68F006E20F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3905FDCF3F07C5E95B0056E1 /* Pods-ShelterShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
