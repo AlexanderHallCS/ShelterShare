@@ -1,5 +1,5 @@
 //
-//  PhoneSignInViewController.swift
+//  MyInfoViewController.swift
 //  ShelterShare
 //
 //  Created by Alexander Hall on 1/29/22.
@@ -7,12 +7,19 @@
 
 import UIKit
 
-class PhoneSignInViewController: UIViewController {
+class MyInfoViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet var nameTF: UITextField!
+    @IBOutlet var phoneTF: UITextField!
+    @IBOutlet var emailTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nameTF.delegate = self
+        phoneTF.delegate = self
+        emailTF.delegate = self
     }
     
 

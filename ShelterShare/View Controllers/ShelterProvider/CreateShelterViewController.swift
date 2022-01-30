@@ -28,6 +28,7 @@ class CreateShelterViewController: UIViewController, UITextFieldDelegate, UIPick
         
         shelterTypePickerView.delegate = self
     }
+    
     @IBAction func segueFromCreateShelterToYourShelters(_ sender: UIButton) {
         // if done storing shelter data in firebase
         performSegue(withIdentifier: "createShelterToYourShelters", sender: nil)

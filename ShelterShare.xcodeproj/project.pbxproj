@@ -14,7 +14,7 @@
 		115672B427A61250004353AB /* YourSheltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B327A61250004353AB /* YourSheltersTableViewController.swift */; };
 		115672B627A614FD004353AB /* ShelterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B527A614FD004353AB /* ShelterInfoViewController.swift */; };
 		115672B827A62126004353AB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B727A62126004353AB /* LocationViewController.swift */; };
-		11A1B86D27A5FF1100717C10 /* PhoneSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1B86C27A5FF1100717C10 /* PhoneSignInViewController.swift */; };
+		115672BA27A6516C004353AB /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B927A6516C004353AB /* MyInfoViewController.swift */; };
 		11F0624227A5D68D006E20F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624127A5D68D006E20F9 /* AppDelegate.swift */; };
 		11F0624427A5D68D006E20F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624327A5D68D006E20F9 /* SceneDelegate.swift */; };
 		11F0624627A5D68D006E20F9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624527A5D68D006E20F9 /* StartViewController.swift */; };
@@ -34,7 +34,7 @@
 		115672B327A61250004353AB /* YourSheltersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourSheltersTableViewController.swift; sourceTree = "<group>"; };
 		115672B527A614FD004353AB /* ShelterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterInfoViewController.swift; sourceTree = "<group>"; };
 		115672B727A62126004353AB /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		11A1B86C27A5FF1100717C10 /* PhoneSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSignInViewController.swift; sourceTree = "<group>"; };
+		115672B927A6516C004353AB /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		11F0623E27A5D68D006E20F9 /* ShelterShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShelterShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F0624127A5D68D006E20F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F0624327A5D68D006E20F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +63,9 @@
 		115672AD27A60CE2004353AB /* ShelterSeeker */ = {
 			isa = PBXGroup;
 			children = (
-				11A1B86C27A5FF1100717C10 /* PhoneSignInViewController.swift */,
 				115672AB27A60C2A004353AB /* NearbySheltersTableViewController.swift */,
 				115672B527A614FD004353AB /* ShelterInfoViewController.swift */,
+				115672B927A6516C004353AB /* MyInfoViewController.swift */,
 			);
 			path = ShelterSeeker;
 			sourceTree = "<group>";
@@ -73,7 +73,6 @@
 		115672AE27A60CEB004353AB /* ShelterProvider */ = {
 			isa = PBXGroup;
 			children = (
-				115672A727A608C4004353AB /* GoogleSignInViewController.swift */,
 				115672AF27A61221004353AB /* ShelterActionsViewController.swift */,
 				115672B127A61237004353AB /* CreateShelterViewController.swift */,
 				115672B327A61250004353AB /* YourSheltersTableViewController.swift */,
@@ -126,6 +125,7 @@
 		11F0625627A5D758006E20F9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				115672A727A608C4004353AB /* GoogleSignInViewController.swift */,
 				115672AE27A60CEB004353AB /* ShelterProvider */,
 				115672AD27A60CE2004353AB /* ShelterSeeker */,
 				11F0624527A5D68D006E20F9 /* StartViewController.swift */,
@@ -292,7 +292,7 @@
 				115672B827A62126004353AB /* LocationViewController.swift in Sources */,
 				115672A827A608C4004353AB /* GoogleSignInViewController.swift in Sources */,
 				11F0624227A5D68D006E20F9 /* AppDelegate.swift in Sources */,
-				11A1B86D27A5FF1100717C10 /* PhoneSignInViewController.swift in Sources */,
+				115672BA27A6516C004353AB /* MyInfoViewController.swift in Sources */,
 				115672B627A614FD004353AB /* ShelterInfoViewController.swift in Sources */,
 				11F0624427A5D68D006E20F9 /* SceneDelegate.swift in Sources */,
 			);

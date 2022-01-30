@@ -18,7 +18,7 @@ class YourSheltersTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,6 +31,8 @@ class YourSheltersTableViewController: UITableViewController {
         return 0
     }
 
+    @IBAction func unwindToYourSheltersVC(segue: UIStoryboardSegue) {}
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
