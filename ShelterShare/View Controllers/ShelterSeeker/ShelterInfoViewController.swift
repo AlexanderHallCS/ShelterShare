@@ -44,6 +44,17 @@ class ShelterInfoViewController: UIViewController {
     }
 
     @IBAction func pressJoin(_ sender: UIButton) {
+        let db = Firestore.firestore()
+        // add one to current capacity of shelter identified by shelterId
+        db.collection("users").document(shelterId).updateData([
+            "currCapacity" : FieldValue.increment(Int64(1))
+        ])
+        // set this user's current shelter to be shelterId
+        db.collection("users").document(GlobalUserData.userID).updateData([
+            "shelter" : shelterId
+        ])
+        
+        // make button green
         joinButton.setImage(UIImage(named: "JoinedButton"), for: .normal)
     }
     
