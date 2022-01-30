@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
-        <!--Phone Sign In View Controller-->
+        <!--Google Sign In View Controller-->
         <scene sceneID="WFd-v7-uaM">
             <objects>
-                <viewController id="9y1-Uq-bX7" customClass="PhoneSignInViewController" customModule="ShelterShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9y1-Uq-bX7" customClass="GoogleSignInViewController" customModule="ShelterShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mkX-9E-rys">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -601,10 +601,10 @@
             </objects>
             <point key="canvasLocation" x="1873.913043478261" y="-194.19642857142856"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Nearby Shelters Table View Controller-->
         <scene sceneID="dDh-d1-mEO">
             <objects>
-                <tableViewController id="tHT-sB-ovU" sceneMemberID="viewController">
+                <tableViewController id="tHT-sB-ovU" customClass="NearbySheltersTableViewController" customModule="ShelterShare" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MpR-ht-1XA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -763,7 +763,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="G1K-Zd-Oac" kind="unwind" unwindAction="unwindToYourSheltersVCWithSegue:" id="7yd-5G-gKU"/>
+                                    <segue destination="G1K-Zd-Oac" kind="unwind" unwindAction="unwindToNearbySheltersWithSegue:" id="zp6-Iq-Sma"/>
                                 </connections>
                             </button>
                         </subviews>

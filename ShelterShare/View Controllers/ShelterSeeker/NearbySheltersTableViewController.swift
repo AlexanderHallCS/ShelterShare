@@ -6,11 +6,21 @@
 //
 
 import UIKit
+import CoreLocation
 
-class NearbySheltersTableViewController: UITableViewController {
+class NearbySheltersTableViewController: UITableViewController, CLLocationManagerDelegate {
 
+    let manager = CLLocationManager()
+    
+    var didGetLocation = false
+    var currLocation = CLLocationCoordinate2D()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -19,6 +29,25 @@ class NearbySheltersTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedAlways:
+            fallthrough
+        case .authorizedWhenInUse:
+            manager.startUpdatingLocation()
+        default:
+            break
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if(!didGetLocation) {
+            currLocation = manager.location!.coordinate
+            didGetLocation = true
+            print("Current Location: \(currLocation)")
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,6 +60,8 @@ class NearbySheltersTableViewController: UITableViewController {
         return 0
     }
 
+    @IBAction func unwindToNearbyShelters(segue: UIStoryboardSegue) {}
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
