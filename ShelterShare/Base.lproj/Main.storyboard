@@ -829,7 +829,7 @@
                                             <rect key="frame" x="292" y="5" width="117" height="91"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eH5-hy-ylB">
-                                            <rect key="frame" x="20" y="12" width="166" height="21"/>
+                                            <rect key="frame" x="20" y="12" width="235" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -848,7 +848,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="eH5-hy-ylB" firstAttribute="width" secondItem="tme-8T-gM2" secondAttribute="width" multiplier="1.00302" id="5kX-sb-bAH"/>
+                                        <constraint firstItem="eH5-hy-ylB" firstAttribute="width" secondItem="tme-8T-gM2" secondAttribute="width" multiplier="1.00302" constant="69.000190000000003" id="5kX-sb-bAH"/>
                                         <constraint firstAttribute="trailing" secondItem="UHa-KR-wx1" secondAttribute="trailing" constant="5" id="BDQ-d2-ucD"/>
                                         <constraint firstItem="eH5-hy-ylB" firstAttribute="leading" secondItem="tme-8T-gM2" secondAttribute="leading" id="Gjp-6X-JpE"/>
                                         <constraint firstItem="H7t-wb-7Yc" firstAttribute="top" secondItem="tme-8T-gM2" secondAttribute="bottom" constant="8.5" id="Luv-WT-Qap"/>
