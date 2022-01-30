@@ -26,7 +26,7 @@ class CreateShelterViewController: UIViewController, UITextFieldDelegate, UIPick
     var currLocation = CLLocationCoordinate2D()
     
     // picker model
-    var pickerChoices = ["House", "Store", "Church", "Building", "Homeless Shelter", "Alternate"]
+    var pickerChoices = ["House", "Store", "Church", "Building", "Alternate"]
     
     var shelterType = ""
     

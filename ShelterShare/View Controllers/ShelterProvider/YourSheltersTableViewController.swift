@@ -71,6 +71,10 @@ class YourSheltersTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180.0
+    }
+    
     @IBAction func unwindToYourSheltersVC(segue: UIStoryboardSegue) {}
 
 }

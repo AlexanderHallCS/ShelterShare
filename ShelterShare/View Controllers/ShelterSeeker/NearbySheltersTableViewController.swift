@@ -7,6 +7,14 @@
 
 import UIKit
 import CoreLocation
+import FirebaseCore
+import FirebaseFirestore
+
+class ShelterNearMeCell: UITableViewCell {
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var capacityLabel: UILabel!
+}
 
 class NearbySheltersTableViewController: UITableViewController, CLLocationManagerDelegate {
 
@@ -14,6 +22,10 @@ class NearbySheltersTableViewController: UITableViewController, CLLocationManage
     
     var didGetLocation = false
     var currLocation = CLLocationCoordinate2D()
+    
+    var shelterNames: [String] = []
+    var shelterDistances: [String] = []
+    var shelterCapacities: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,68 +56,55 @@ class NearbySheltersTableViewController: UITableViewController, CLLocationManage
         if(!didGetLocation) {
             currLocation = manager.location!.coordinate
             didGetLocation = true
+            fetchShelterData()
             print("Current Location: \(currLocation)")
         }
+    }
+    
+    private func fetchShelterData() {
+        Firestore.firestore().collection("users").getDocuments(completion: { (snapshot, error) in
+            snapshot?.documents.forEach({ (document) in
+                let data = document.data()
+                if((data["userType"] as! String) == "shelterProvider") {
+                    let distanceBetweenYouAndShelter = CLLocation(latitude: self.currLocation.latitude, longitude: self.currLocation.longitude).distance(from: CLLocation(latitude: data["latitude"] as! Double, longitude: data["longitude"] as! Double))
+                    print("Distance: \(distanceBetweenYouAndShelter.magnitude)")
+                    // if distance to shelter is less than 100 miles
+                    if(distanceBetweenYouAndShelter/1609.344 < 100) {
+                        self.shelterNames.append("Shelter Name: \(data["shelterName"] as! String)")
+                        self.shelterCapacities.append("Capacity: (\(data["currCapacity"] as! NSNumber)/\(data["maxCapacity"] as! NSNumber))")
+                        self.shelterDistances.append("Distance: \(String(format: "%.2f", distanceBetweenYouAndShelter.magnitude)) miles")
+                    }
+                }
+            })
+            self.tableView.reloadData()
+        })
     }
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return shelterNames.count
     }
 
-    @IBAction func unwindToNearbyShelters(segue: UIStoryboardSegue) {}
-    
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shelterNearMeCell", for: indexPath) as! ShelterNearMeCell
 
-        // Configure the cell...
+        cell.nameLabel.text = shelterNames[indexPath.row]
+        cell.distanceLabel.text = shelterDistances[indexPath.row]
+        cell.capacityLabel.text = shelterCapacities[indexPath.row]
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 102.0
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+    
+    @IBAction func unwindToNearbyShelters(segue: UIStoryboardSegue) {}
 
     /*
     // MARK: - Navigation
