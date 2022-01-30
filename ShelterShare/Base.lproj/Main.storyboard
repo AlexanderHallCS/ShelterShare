@@ -293,9 +293,6 @@
                                 <rect key="frame" x="263.5" y="404" width="82" height="43"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Enter"/>
-                                <connections>
-                                    <segue destination="jJW-7i-e8Y" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="u4R-Pf-Kwa"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1H-ms-MrO" userLabel="ShelterNameTF">
                                 <rect key="frame" x="226" y="298" width="157" height="34"/>
@@ -416,21 +413,6 @@
                 <exit id="zdf-Lx-J9Y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2798.5507246376815" y="508.92857142857139"/>
-        </scene>
-        <!--Autocomplete Results View Controller-->
-        <scene sceneID="3pz-mM-63u">
-            <objects>
-                <viewController id="jJW-7i-e8Y" customClass="GMSAutocompleteResultsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="76v-OS-4Hz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="NwL-7L-koa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="okK-oJ-J03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3645" y="509"/>
         </scene>
         <!--Your Shelters Table View Controller-->
         <scene sceneID="sKc-GX-CGG">
