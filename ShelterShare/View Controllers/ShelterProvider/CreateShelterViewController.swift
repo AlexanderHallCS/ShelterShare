@@ -96,10 +96,12 @@ class CreateShelterViewController: UIViewController, UITextFieldDelegate, UIPick
             "phone" : phoneTF.text!,
             "email" : emailTF.text!,
             "organizerName" : yourNameTF.text!,
-            "capacityTF" : Int(capacityTF.text!) ?? 0,
-            "latitude" : currLocation.latitude,
-            "longitude" : currLocation.longitude,
-            "userType" : GlobalUserData.userType
+            "maxCapacity" : Int(capacityTF.text!) ?? 0,
+            "currCapacity" : 0,
+            "latitude" : 30.90266, // hard-coded for no leak. Alter: (currLocation.latitude)
+            "longitude" : -96.68618, // hard-coded for no leak. Alter: (currLocation.longitude)
+            "userType" : GlobalUserData.userType,
+            "id" : GlobalUserData.userID
         ])
         performSegue(withIdentifier: "createShelterToYourShelters", sender: nil)
     }

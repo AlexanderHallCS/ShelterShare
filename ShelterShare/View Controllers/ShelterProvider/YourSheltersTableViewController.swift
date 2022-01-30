@@ -6,86 +6,71 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseCore
+
+class ShelterTableViewCell: UITableViewCell {
+    @IBOutlet var shelterNameLabel: UILabel!
+    @IBOutlet var shelterTypeLabel: UILabel!
+    @IBOutlet var shelterPhoneLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var capacityLabel: UILabel!
+}
 
 class YourSheltersTableViewController: UITableViewController {
 
+    var shelterNames: [String] = []
+    var shelterTypes: [String] = []
+    var shelterPhones: [String] = []
+    var shelterEmails: [String] = []
+    var shelterCapacities: [String] = []
+    var shelterLocations: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        Firestore.firestore().collection("users").getDocuments(completion: { (snapshot, error) in
+            snapshot?.documents.forEach({ (document) in
+                let data = document.data()
+                if((data["userType"] as! String) == "shelterProvider") {
+                    self.shelterNames.append("Shelter Name: \(data["shelterName"] as! String)")
+                    self.shelterTypes.append("Shelter Type: \(data["shelterType"] as! String)")
+                    self.shelterPhones.append("Phone: \(data["phone"] as! String)")
+                    self.shelterEmails.append("Email: \(data["email"] as! String)")
+                    self.shelterLocations.append("Location: (\(String(format: "%.2f", data["latitude"] as! Double)),\(String(format: "%.2f", data["longitude"] as! Double)))")
+                    self.shelterCapacities.append("Capacity: (\(data["currCapacity"] as! NSNumber)/\(data["maxCapacity"] as! NSNumber))")
+                    print("DATA: \(data)")
+                }
+            })
+            self.tableView.reloadData()
+        })
+        
     }
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return shelterNames.count
     }
-
-    @IBAction func unwindToYourSheltersVC(segue: UIStoryboardSegue) {}
     
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShelterCell", for: indexPath) as! ShelterTableViewCell
 
-        // Configure the cell...
+        cell.shelterNameLabel.text = shelterNames[indexPath.row]
+        cell.shelterTypeLabel.text = shelterTypes[indexPath.row]
+        cell.shelterPhoneLabel.text = shelterPhones[indexPath.row]
+        cell.emailLabel.text = shelterEmails[indexPath.row]
+        cell.locationLabel.text = shelterLocations[indexPath.row]
+        cell.capacityLabel.text = shelterCapacities[indexPath.row]
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    @IBAction func unwindToYourSheltersVC(segue: UIStoryboardSegue) {}
 
 }

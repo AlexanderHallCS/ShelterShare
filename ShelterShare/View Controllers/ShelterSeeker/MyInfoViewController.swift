@@ -34,7 +34,8 @@ class MyInfoViewController: UIViewController, UITextFieldDelegate {
             "name" : nameTF.text!,
             "phone" : phoneTF.text!,
             "email" : emailTF.text!,
-            "userType" : GlobalUserData.userType
+            "userType" : GlobalUserData.userType,
+            "shelter" : "" // identified by id
         ])
         performSegue(withIdentifier: "myInfoToSheltersTable", sender: self)
     }

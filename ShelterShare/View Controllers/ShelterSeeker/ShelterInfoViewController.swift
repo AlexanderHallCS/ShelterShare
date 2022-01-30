@@ -13,18 +13,20 @@ class ShelterInfoViewController: UIViewController {
     
     @IBOutlet var shelterNameLabel: UILabel!
     @IBOutlet var shelterTypeLabel: UILabel!
-    @IBOutlet var locationLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var hostNameLabel: UILabel!
+    
+    @IBOutlet var locationViewButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        joinButton.setImage(UIImage(named: "JoinButtonPressed"), for: .selected)
-        
-        //joinButton.setImage(UIImage(named: "JoinedButton"), for: .normal)
     }
 
+    @IBAction func pressJoin(_ sender: UIButton) {
+        joinButton.setImage(UIImage(named: "JoinedButton"), for: .normal)
+    }
+    
 }
