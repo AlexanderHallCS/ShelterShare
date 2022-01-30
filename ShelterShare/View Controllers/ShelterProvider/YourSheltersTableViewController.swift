@@ -27,6 +27,10 @@ class YourSheltersTableViewController: UITableViewController {
     var shelterCapacities: [String] = []
     var shelterLocations: [String] = []
     
+    var ids: [String] = []
+    
+    var selectedId = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +44,7 @@ class YourSheltersTableViewController: UITableViewController {
                     self.shelterEmails.append("Email: \(data["email"] as! String)")
                     self.shelterLocations.append("Location: (\(String(format: "%.2f", data["latitude"] as! Double)),\(String(format: "%.2f", data["longitude"] as! Double)))")
                     self.shelterCapacities.append("Capacity: (\(data["currCapacity"] as! NSNumber)/\(data["maxCapacity"] as! NSNumber))")
+                    self.ids.append(data["id"] as! String)
                     print("DATA: \(data)")
                 }
             })
@@ -71,8 +76,19 @@ class YourSheltersTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedId = ids[indexPath.row]
+        performSegue(withIdentifier: "mySheltersToShelterMembers", sender: self)
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180.0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? ShelterMembersTableViewController {
+            destVC.shelterId = selectedId
+        }
     }
     
     @IBAction func unwindToYourSheltersVC(segue: UIStoryboardSegue) {}

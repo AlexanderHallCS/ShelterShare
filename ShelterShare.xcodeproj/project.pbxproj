@@ -15,6 +15,7 @@
 		115672B627A614FD004353AB /* ShelterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B527A614FD004353AB /* ShelterInfoViewController.swift */; };
 		115672BA27A6516C004353AB /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B927A6516C004353AB /* MyInfoViewController.swift */; };
 		115672BC27A68DCC004353AB /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672BB27A68DCC004353AB /* Globals.swift */; };
+		115672BE27A6CAAD004353AB /* ShelterMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672BD27A6CAAD004353AB /* ShelterMembersTableViewController.swift */; };
 		11F0624227A5D68D006E20F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624127A5D68D006E20F9 /* AppDelegate.swift */; };
 		11F0624427A5D68D006E20F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624327A5D68D006E20F9 /* SceneDelegate.swift */; };
 		11F0624627A5D68D006E20F9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624527A5D68D006E20F9 /* StartViewController.swift */; };
@@ -35,6 +36,7 @@
 		115672B527A614FD004353AB /* ShelterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterInfoViewController.swift; sourceTree = "<group>"; };
 		115672B927A6516C004353AB /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		115672BB27A68DCC004353AB /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		115672BD27A6CAAD004353AB /* ShelterMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShelterMembersTableViewController.swift; path = "ShelterShare/View Controllers/ShelterProvider/ShelterMembersTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		11F0623E27A5D68D006E20F9 /* ShelterShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShelterShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F0624127A5D68D006E20F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F0624327A5D68D006E20F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				115672AF27A61221004353AB /* ShelterActionsViewController.swift */,
 				115672B127A61237004353AB /* CreateShelterViewController.swift */,
 				115672B327A61250004353AB /* YourSheltersTableViewController.swift */,
+				115672BD27A6CAAD004353AB /* ShelterMembersTableViewController.swift */,
 			);
 			path = ShelterProvider;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				115672B427A61250004353AB /* YourSheltersTableViewController.swift in Sources */,
 				115672BC27A68DCC004353AB /* Globals.swift in Sources */,
 				115672A827A608C4004353AB /* GoogleSignInViewController.swift in Sources */,
+				115672BE27A6CAAD004353AB /* ShelterMembersTableViewController.swift in Sources */,
 				11F0624227A5D68D006E20F9 /* AppDelegate.swift in Sources */,
 				115672BA27A6516C004353AB /* MyInfoViewController.swift in Sources */,
 				115672B627A614FD004353AB /* ShelterInfoViewController.swift in Sources */,
