@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		115672A827A608C4004353AB /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672A727A608C4004353AB /* GoogleSignInViewController.swift */; };
+		115672AC27A60C2A004353AB /* NearbySheltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672AB27A60C2A004353AB /* NearbySheltersTableViewController.swift */; };
+		115672B027A61221004353AB /* ShelterActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672AF27A61221004353AB /* ShelterActionsViewController.swift */; };
+		115672B227A61237004353AB /* CreateShelterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B127A61237004353AB /* CreateShelterViewController.swift */; };
+		115672B427A61250004353AB /* YourSheltersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B327A61250004353AB /* YourSheltersTableViewController.swift */; };
+		115672B627A614FD004353AB /* ShelterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B527A614FD004353AB /* ShelterInfoViewController.swift */; };
+		115672B827A62126004353AB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115672B727A62126004353AB /* LocationViewController.swift */; };
+		11A1B86D27A5FF1100717C10 /* PhoneSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1B86C27A5FF1100717C10 /* PhoneSignInViewController.swift */; };
 		11F0624227A5D68D006E20F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624127A5D68D006E20F9 /* AppDelegate.swift */; };
 		11F0624427A5D68D006E20F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624327A5D68D006E20F9 /* SceneDelegate.swift */; };
-		11F0624627A5D68D006E20F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624527A5D68D006E20F9 /* ViewController.swift */; };
+		11F0624627A5D68D006E20F9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F0624527A5D68D006E20F9 /* StartViewController.swift */; };
 		11F0624927A5D68D006E20F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F0624727A5D68D006E20F9 /* Main.storyboard */; };
 		11F0624B27A5D68F006E20F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F0624A27A5D68F006E20F9 /* Assets.xcassets */; };
 		11F0624E27A5D68F006E20F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F0624C27A5D68F006E20F9 /* LaunchScreen.storyboard */; };
@@ -19,10 +27,18 @@
 
 /* Begin PBXFileReference section */
 		0CB1228E1DF62193335C446F /* Pods_ShelterShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShelterShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		115672A727A608C4004353AB /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
+		115672AB27A60C2A004353AB /* NearbySheltersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySheltersTableViewController.swift; sourceTree = "<group>"; };
+		115672AF27A61221004353AB /* ShelterActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterActionsViewController.swift; sourceTree = "<group>"; };
+		115672B127A61237004353AB /* CreateShelterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShelterViewController.swift; sourceTree = "<group>"; };
+		115672B327A61250004353AB /* YourSheltersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourSheltersTableViewController.swift; sourceTree = "<group>"; };
+		115672B527A614FD004353AB /* ShelterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterInfoViewController.swift; sourceTree = "<group>"; };
+		115672B727A62126004353AB /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		11A1B86C27A5FF1100717C10 /* PhoneSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSignInViewController.swift; sourceTree = "<group>"; };
 		11F0623E27A5D68D006E20F9 /* ShelterShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShelterShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F0624127A5D68D006E20F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F0624327A5D68D006E20F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		11F0624527A5D68D006E20F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11F0624527A5D68D006E20F9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		11F0624827A5D68D006E20F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11F0624A27A5D68F006E20F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F0624D27A5D68F006E20F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +60,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115672AD27A60CE2004353AB /* ShelterSeeker */ = {
+			isa = PBXGroup;
+			children = (
+				11A1B86C27A5FF1100717C10 /* PhoneSignInViewController.swift */,
+				115672AB27A60C2A004353AB /* NearbySheltersTableViewController.swift */,
+				115672B527A614FD004353AB /* ShelterInfoViewController.swift */,
+			);
+			path = ShelterSeeker;
+			sourceTree = "<group>";
+		};
+		115672AE27A60CEB004353AB /* ShelterProvider */ = {
+			isa = PBXGroup;
+			children = (
+				115672A727A608C4004353AB /* GoogleSignInViewController.swift */,
+				115672AF27A61221004353AB /* ShelterActionsViewController.swift */,
+				115672B127A61237004353AB /* CreateShelterViewController.swift */,
+				115672B327A61250004353AB /* YourSheltersTableViewController.swift */,
+				115672B727A62126004353AB /* LocationViewController.swift */,
+			);
+			path = ShelterProvider;
+			sourceTree = "<group>";
+		};
 		11F0623527A5D68D006E20F9 = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +126,9 @@
 		11F0625627A5D758006E20F9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				11F0624527A5D68D006E20F9 /* ViewController.swift */,
+				115672AE27A60CEB004353AB /* ShelterProvider */,
+				115672AD27A60CE2004353AB /* ShelterSeeker */,
+				11F0624527A5D68D006E20F9 /* StartViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -107,7 +147,6 @@
 				5AE392F6A604C677EE287227 /* Pods-ShelterShare.debug.xcconfig */,
 				3905FDCF3F07C5E95B0056E1 /* Pods-ShelterShare.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,6 +162,7 @@
 				11F0623B27A5D68D006E20F9 /* Frameworks */,
 				11F0623C27A5D68D006E20F9 /* Resources */,
 				880771049AA0479EEDD0FF25 /* [CP] Embed Pods Frameworks */,
+				92A59D1E501994670257F53C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +260,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShelterShare/Pods-ShelterShare-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		92A59D1E501994670257F53C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShelterShare/Pods-ShelterShare-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShelterShare/Pods-ShelterShare-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShelterShare/Pods-ShelterShare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -227,8 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F0624627A5D68D006E20F9 /* ViewController.swift in Sources */,
+				115672AC27A60C2A004353AB /* NearbySheltersTableViewController.swift in Sources */,
+				115672B027A61221004353AB /* ShelterActionsViewController.swift in Sources */,
+				115672B227A61237004353AB /* CreateShelterViewController.swift in Sources */,
+				11F0624627A5D68D006E20F9 /* StartViewController.swift in Sources */,
+				115672B427A61250004353AB /* YourSheltersTableViewController.swift in Sources */,
+				115672B827A62126004353AB /* LocationViewController.swift in Sources */,
+				115672A827A608C4004353AB /* GoogleSignInViewController.swift in Sources */,
 				11F0624227A5D68D006E20F9 /* AppDelegate.swift in Sources */,
+				11A1B86D27A5FF1100717C10 /* PhoneSignInViewController.swift in Sources */,
+				115672B627A614FD004353AB /* ShelterInfoViewController.swift in Sources */,
 				11F0624427A5D68D006E20F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

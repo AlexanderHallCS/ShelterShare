@@ -11,4 +11,5 @@ target 'ShelterShare' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'GooglePlaces'
 end
