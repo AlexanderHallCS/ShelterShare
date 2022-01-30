@@ -12,7 +12,7 @@ import FirebaseCore
 import GoogleSignIn
 
 class GoogleSignInViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        var ref: DatabaseReference!
@@ -40,8 +40,9 @@ class GoogleSignInViewController: UIViewController {
                     print("There was an error!")
                 }
                 // assume user does not have multi-factor auth enabled (no phone confirmation)
-                // user is signed in
                 print("signed in!")
+                goToSpecificVC()
+                //print(user?.userID)
             }
         }
     }
@@ -56,13 +57,13 @@ class GoogleSignInViewController: UIViewController {
         }
     }
     
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func goToSpecificVC() {
+        switch GlobalUserData.userType {
+        case "shelterSeeker":
+            performSegue(withIdentifier: "loginToSheltersNearMe", sender: self)
+        default:
+            performSegue(withIdentifier: "loginToShelterActions", sender: self)
+        }
     }
 
 }
