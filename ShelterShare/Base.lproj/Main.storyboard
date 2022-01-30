@@ -98,12 +98,33 @@
                                     <segue destination="edx-D0-We7" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="0Nv-IY-o5i"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUe-O0-zd9" customClass="GIDSignInButton">
+                                <rect key="frame" x="104" y="752" width="206" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <action selector="signInWithGoogle:" destination="9y1-Uq-bX7" eventType="touchUpInside" id="JbU-uU-pB1"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wek-oF-kRR">
+                                <rect key="frame" x="321" y="44" width="80" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOut:" destination="9y1-Uq-bX7" eventType="touchUpInside" id="Duf-T1-9CZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NbA-1k-sOo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="woZ-fF-WJs" firstAttribute="height" secondItem="mkX-9E-rys" secondAttribute="height" multiplier="0.0747768" id="0gU-XN-IZd"/>
+                            <constraint firstItem="NbA-1k-sOo" firstAttribute="trailing" secondItem="wek-oF-kRR" secondAttribute="trailing" constant="13" id="2eF-pF-Q7C"/>
+                            <constraint firstItem="wek-oF-kRR" firstAttribute="height" secondItem="mkX-9E-rys" secondAttribute="height" multiplier="0.0345982" id="5v4-6o-uon"/>
+                            <constraint firstItem="wek-oF-kRR" firstAttribute="width" secondItem="mkX-9E-rys" secondAttribute="width" multiplier="0.193237" id="6Dl-qh-Xe8"/>
                             <constraint firstItem="k7u-rr-wGL" firstAttribute="centerX" secondItem="mkX-9E-rys" secondAttribute="centerX" id="BjF-ga-p1x"/>
+                            <constraint firstItem="wek-oF-kRR" firstAttribute="top" secondItem="NbA-1k-sOo" secondAttribute="top" id="DEd-sa-S84"/>
                             <constraint firstItem="k7u-rr-wGL" firstAttribute="height" secondItem="mkX-9E-rys" secondAttribute="height" id="PHS-Mf-qeY"/>
                             <constraint firstItem="k7u-rr-wGL" firstAttribute="centerY" secondItem="mkX-9E-rys" secondAttribute="centerY" id="UEl-5J-bkj"/>
                             <constraint firstItem="woZ-fF-WJs" firstAttribute="centerX" secondItem="mkX-9E-rys" secondAttribute="centerX" id="XgD-n1-15q"/>
@@ -119,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsq-7o-KWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="84"/>
+            <point key="canvasLocation" x="915.94202898550736" y="83.705357142857139"/>
         </scene>
         <!--Shelter Actions View Controller-->
         <scene sceneID="WCx-8P-fB6">
