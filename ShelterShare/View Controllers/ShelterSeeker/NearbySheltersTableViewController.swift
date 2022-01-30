@@ -14,6 +14,8 @@ class ShelterNearMeCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var distanceLabel: UILabel!
     @IBOutlet var capacityLabel: UILabel!
+    
+    var id = ""
 }
 
 class NearbySheltersTableViewController: UITableViewController, CLLocationManagerDelegate {
@@ -26,6 +28,9 @@ class NearbySheltersTableViewController: UITableViewController, CLLocationManage
     var shelterNames: [String] = []
     var shelterDistances: [String] = []
     var shelterCapacities: [String] = []
+    var ids: [String] = []
+    
+    var selectedId = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +77,8 @@ class NearbySheltersTableViewController: UITableViewController, CLLocationManage
                     if(distanceBetweenYouAndShelter/1609.344 < 100) {
                         self.shelterNames.append("Shelter Name: \(data["shelterName"] as! String)")
                         self.shelterCapacities.append("Capacity: (\(data["currCapacity"] as! NSNumber)/\(data["maxCapacity"] as! NSNumber))")
-                        self.shelterDistances.append("Distance: \(String(format: "%.2f", distanceBetweenYouAndShelter.magnitude)) miles")
+                        self.shelterDistances.append("Distance: \(String(format: "%.2f", distanceBetweenYouAndShelter.magnitude/1609.344)) miles")
+                        self.ids.append(data["id"] as! String)
                     }
                 }
             })
@@ -96,6 +102,7 @@ class NearbySheltersTableViewController: UITableViewController, CLLocationManage
         cell.nameLabel.text = shelterNames[indexPath.row]
         cell.distanceLabel.text = shelterDistances[indexPath.row]
         cell.capacityLabel.text = shelterCapacities[indexPath.row]
+        cell.id = ids[indexPath.row]
 
         return cell
     }
@@ -104,16 +111,23 @@ class NearbySheltersTableViewController: UITableViewController, CLLocationManage
         return 102.0
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedId = ids[indexPath.row]
+        performSegue(withIdentifier: "sheltersNearMeToInfo", sender: self)
+    }
+    
     @IBAction func unwindToNearbyShelters(segue: UIStoryboardSegue) {}
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let destVC = segue.destination as? ShelterInfoViewController {
+            destVC.shelterId = selectedId
+        }
     }
-    */
 
 }
