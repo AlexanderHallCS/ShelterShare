@@ -33,7 +33,8 @@ class MyInfoViewController: UIViewController, UITextFieldDelegate {
         db.collection("users").document(GlobalUserData.userID).setData([
             "name" : nameTF.text!,
             "phone" : phoneTF.text!,
-            "email" : emailTF.text!
+            "email" : emailTF.text!,
+            "userType" : GlobalUserData.userType
         ])
         performSegue(withIdentifier: "myInfoToSheltersTable", sender: self)
     }
