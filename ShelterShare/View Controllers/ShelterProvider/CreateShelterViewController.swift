@@ -98,22 +98,12 @@ class CreateShelterViewController: UIViewController, UITextFieldDelegate, UIPick
             "organizerName" : yourNameTF.text!,
             "maxCapacity" : Int(capacityTF.text!) ?? 0,
             "currCapacity" : 0,
-            "latitude" : 30.90266, // hard-coded for no leak. Alter: (currLocation.latitude)
-            "longitude" : -96.68618, // hard-coded for no leak. Alter: (currLocation.longitude)
+            "latitude" : 30.64228, // hard-coded. Alter: (currLocation.latitude)
+            "longitude" : -96.36422, // hard-coded. Alter: (currLocation.longitude)
             "userType" : GlobalUserData.userType,
             "id" : GlobalUserData.userID
         ])
         performSegue(withIdentifier: "createShelterToYourShelters", sender: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

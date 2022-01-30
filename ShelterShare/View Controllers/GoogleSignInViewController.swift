@@ -15,15 +15,11 @@ class GoogleSignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        var ref: DatabaseReference!
-//
-//        ref = Database.database().reference()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func signInWithGoogle(_ sender: GIDSignInButton) {
         // MARK: Truncated boiler code from Google Sign for iOS documentation
-        print("starting to sign in!")
+        
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         
         // Create Google Sign In configuration object.
@@ -40,7 +36,7 @@ class GoogleSignInViewController: UIViewController {
                     print("There was an error!")
                 }
                 // assume user does not have multi-factor auth enabled (no phone confirmation)
-                print("signed in!")
+                // signed in
                 GlobalUserData.userID = (user?.userID)!
                 goToSpecificVC()
             }
@@ -51,10 +47,19 @@ class GoogleSignInViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            print("signed out!")
+            // signed out
+            createAlert(message: "You have been logged out!")
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
+    }
+    
+    private func createAlert(message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) {(action: UIAlertAction) -> Void in
+            alert.removeFromParent()
+        })
+        present(alert, animated: true, completion: nil)
     }
     
     private func goToSpecificVC() {

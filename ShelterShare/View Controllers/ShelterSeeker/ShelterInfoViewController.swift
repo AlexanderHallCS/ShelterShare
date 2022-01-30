@@ -36,7 +36,6 @@ class ShelterInfoViewController: UIViewController {
                         self.phoneLabel.text = "\(data["phone"] as! String)"
                         self.emailLabel.text = "\(data["email"] as! String)"
                         self.hostNameLabel.text = "\(data["organizerName"] as! String)"
-                        print("DATA: \(data)")
                     }
                 }
             })
@@ -56,6 +55,15 @@ class ShelterInfoViewController: UIViewController {
         
         // make button green
         joinButton.setImage(UIImage(named: "JoinedButton"), for: .normal)
+        createAlert(message: "You have joined the shelter!")
+    }
+    
+    private func createAlert(message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) {(action: UIAlertAction) -> Void in
+            alert.removeFromParent()
+        })
+        present(alert, animated: true, completion: nil)
     }
     
 }

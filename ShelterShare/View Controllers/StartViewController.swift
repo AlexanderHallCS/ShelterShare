@@ -15,12 +15,10 @@ class StartViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? GoogleSignInViewController {
-            if segue.identifier == "INeedAShelterToLogin" {
-                GlobalUserData.userType = "shelterSeeker"
-            } else {
-                GlobalUserData.userType = "shelterProvider"
-            }
+        if segue.identifier == "INeedAShelterToLogin" {
+            GlobalUserData.userType = "shelterSeeker"
+        } else {
+            GlobalUserData.userType = "shelterProvider"
         }
     }
 
