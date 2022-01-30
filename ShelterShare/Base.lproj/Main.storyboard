@@ -499,8 +499,8 @@
                                 <state key="selected" backgroundImage="ConfirmButtonPressed"/>
                                 <state key="highlighted" backgroundImage="ConfirmButtonPressed"/>
                                 <connections>
+                                    <action selector="pressConfirm:" destination="edx-D0-We7" eventType="touchUpInside" id="5Ry-ym-zB4"/>
                                     <action selector="segueFromCreateShelterToYourShelters:" destination="KLv-Ml-gNJ" eventType="touchUpInside" id="FOV-ih-qnL"/>
-                                    <segue destination="tHT-sB-ovU" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Z0b-mx-FeE"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Square" translatesAutoresizingMaskIntoConstraints="NO" id="cOE-xA-42J" userLabel="TopSquare">
@@ -598,6 +598,7 @@
                         <outlet property="emailTF" destination="moE-xJ-Rdr" id="f8c-gT-Mme"/>
                         <outlet property="nameTF" destination="Utm-vI-mHL" id="aQf-6l-pr7"/>
                         <outlet property="phoneTF" destination="Ta6-UQ-aZO" id="Y95-mE-w2H"/>
+                        <segue destination="tHT-sB-ovU" kind="presentation" identifier="myInfoToSheltersTable" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oUH-cq-hSL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k24-JP-R4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

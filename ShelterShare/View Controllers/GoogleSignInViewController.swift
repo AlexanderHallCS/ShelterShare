@@ -41,8 +41,8 @@ class GoogleSignInViewController: UIViewController {
                 }
                 // assume user does not have multi-factor auth enabled (no phone confirmation)
                 print("signed in!")
+                GlobalUserData.userID = (user?.userID)!
                 goToSpecificVC()
-                //print(user?.userID)
             }
         }
     }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
 
 class MyInfoViewController: UIViewController, UITextFieldDelegate {
 
@@ -22,15 +24,17 @@ class MyInfoViewController: UIViewController, UITextFieldDelegate {
         emailTF.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
-    */
-
+    
+    @IBAction func pressConfirm(_ sender: UIButton) {
+        let db = Firestore.firestore()
+        db.collection("users").document(GlobalUserData.userID).setData([
+            "name" : nameTF.text!,
+            "phone" : phoneTF.text!,
+            "email" : emailTF.text!
+        ])
+        performSegue(withIdentifier: "myInfoToSheltersTable", sender: self)
+    }
 }

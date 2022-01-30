@@ -9,4 +9,5 @@ import Foundation
 
 struct GlobalUserData {
     static var userType = ""
+    static var userID = ""
 }
