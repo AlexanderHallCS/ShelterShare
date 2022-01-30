@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 class LocationViewController: UIViewController {
 

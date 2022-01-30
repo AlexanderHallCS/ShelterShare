@@ -153,7 +153,7 @@
                                 <state key="selected" backgroundImage="ManageSheltersPressed"/>
                                 <state key="highlighted" backgroundImage="ManageSheltersPressed"/>
                                 <connections>
-                                    <segue destination="mSD-0P-C8g" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="t31-RS-IB6"/>
+                                    <segue destination="ZH6-dc-GOS" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="U0n-k5-S9Z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -384,7 +384,7 @@
                         <outlet property="shelterNameTF" destination="W1H-ms-MrO" id="at6-YC-w3s"/>
                         <outlet property="shelterTypePickerView" destination="N7z-k9-151" id="HMc-Rh-vM0"/>
                         <outlet property="yourNameTF" destination="vfr-Rz-A3L" id="uOf-OF-BHZ"/>
-                        <segue destination="mSD-0P-C8g" kind="presentation" identifier="createShelterToYourShelters" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="P5o-zE-8cP"/>
+                        <segue destination="ZH6-dc-GOS" kind="presentation" identifier="createShelterToYourShelters" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="uCm-V7-KVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUi-Vi-CDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -415,9 +415,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="JbS-cU-pxu">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBy-Yh-SBK">
+                                    <rect key="frame" x="14" y="8" width="56" height="31"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Back"/>
+                                    <connections>
+                                        <segue destination="Ba1-uN-VXK" kind="unwind" unwindAction="unwindToShelterActionsVCWithSegue:" id="bHz-g0-vrb"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Shelters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TVj-wv-U77">
+                                    <rect key="frame" x="143" y="7" width="128" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="TVj-wv-U77" firstAttribute="centerX" secondItem="JbS-cU-pxu" secondAttribute="centerX" id="BQJ-ap-ro4"/>
+                                <constraint firstItem="TVj-wv-U77" firstAttribute="height" secondItem="JbS-cU-pxu" secondAttribute="height" multiplier="0.681818" id="XGI-aU-tBP"/>
+                                <constraint firstItem="TVj-wv-U77" firstAttribute="centerY" secondItem="JbS-cU-pxu" secondAttribute="centerY" id="YKF-p1-wh8"/>
+                                <constraint firstItem="TVj-wv-U77" firstAttribute="width" secondItem="JbS-cU-pxu" secondAttribute="width" multiplier="0.309179" id="YW8-2N-yw2"/>
+                                <constraint firstItem="zBy-Yh-SBK" firstAttribute="leading" secondItem="JbS-cU-pxu" secondAttribute="leading" constant="14" id="b6g-JO-sEz"/>
+                                <constraint firstItem="zBy-Yh-SBK" firstAttribute="top" secondItem="JbS-cU-pxu" secondAttribute="top" constant="8" id="gjv-lQ-eoh"/>
+                                <constraint firstItem="zBy-Yh-SBK" firstAttribute="width" secondItem="JbS-cU-pxu" secondAttribute="width" multiplier="0.135266" id="pg2-9n-IrN"/>
+                                <constraint firstItem="zBy-Yh-SBK" firstAttribute="height" secondItem="JbS-cU-pxu" secondAttribute="height" multiplier="0.704545" id="thk-cI-V5n"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sxX-z4-Xdm">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sxX-z4-Xdm" id="E0z-NT-hfM">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -498,8 +530,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="myP-Bo-k1z">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shelters Near Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IG4-SH-2Qo">
+                                    <rect key="frame" x="121.5" y="8" width="171" height="28"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="IG4-SH-2Qo" firstAttribute="centerX" secondItem="myP-Bo-k1z" secondAttribute="centerX" id="iVW-aa-5HX"/>
+                                <constraint firstItem="IG4-SH-2Qo" firstAttribute="width" secondItem="myP-Bo-k1z" secondAttribute="width" multiplier="0.413043" id="lSN-eY-Dv5"/>
+                                <constraint firstItem="IG4-SH-2Qo" firstAttribute="centerY" secondItem="myP-Bo-k1z" secondAttribute="centerY" id="nTu-WR-G3w"/>
+                                <constraint firstItem="IG4-SH-2Qo" firstAttribute="height" secondItem="myP-Bo-k1z" secondAttribute="height" multiplier="0.636364" id="otn-D5-o5h"/>
+                            </constraints>
+                        </view>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Hog-r7-LzZ">
-                            <rect key="frame" x="0.0" y="110.5" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -509,7 +560,7 @@
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shelterCell" id="WFz-nj-Ndq">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WFz-nj-Ndq" id="1MM-gD-W1f">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -535,7 +586,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abk-Zs-iQy" userLabel="JoinButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abk-Zs-iQy" userLabel="JoinButton">
                                 <rect key="frame" x="123.5" y="790" width="167" height="72"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" backgroundImage="JoinButton"/>
@@ -709,27 +760,9 @@
             </objects>
             <point key="canvasLocation" x="2798.5507246376815" y="-194.19642857142856"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="KRS-hi-ZbS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mSD-0P-C8g" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5DV-yf-7an">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ZH6-dc-GOS" kind="relationship" relationship="rootViewController" id="fov-s0-e1i"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vdX-eo-4yW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2615.9420289855075" y="1316.5178571428571"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="t31-RS-IB6"/>
+        <segue reference="uCm-V7-KVf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ConfirmButton" width="250" height="100"/>
